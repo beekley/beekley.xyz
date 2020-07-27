@@ -1,7 +1,5 @@
 ---
-layout: default
-title: About
+layout: index
+title: Brett Beekley
 ---
-# About page
-
-This page tells you a little bit about me.
+I am a human.
