@@ -1,0 +1,20 @@
+---
+layout: post
+title: Scrobbling through the years
+date: '2017-03-06T16:37:43-08:00'
+tags:
+- spotify
+- lastfm
+- music
+- eric prydz
+- bonobo
+- frombrett
+- data
+- programming
+- sql
+- sqlite
+tumblr_url: http://beekley.xyz/post/158087556881/scrobbling-through-the-years
+---
+<p>Spotify lets your hook up your last.fm account to keep track of what music you listen to. I used a <a href="https://benjaminbenben.com/lastfm-to-csv/">last.fm to csv</a> service someone put together to grab my data, then <a href="http://sqlitebrowser.org/">sqlite DB browser</a> to run queries on it. </p><p>The first thing I did was get a list of the top played artist each week as long since July 2013, when I started keeping this data (summary/freqArtist.csv, on the github repo). Not a lot stands out just looking at that, but then I sorted the top artists by how many times they were the top artist of the week (summary/topArtists.csv). </p><p><i>List of artists with &gt;1 week on the top-artist-of-the-week list:</i></p><figure data-orig-height="561" data-orig-width="271"><img src="https://78.media.tumblr.com/c667e232a8498976fb34d9654c775b0c/tumblr_inline_omf5l8Y88f1qb9570_540.png" data-orig-height="561" data-orig-width="271"/></figure><p>This is arguably a list of my “favorite” artists, since I both listened to them a lot&ndash; enough to be top of the week&ndash; and they stood the test of time&ndash; being listened to over the span of several weeks. And I think the list is pretty accurate.</p><p>Next, I took a look at how much I listened to a few artists before/after seeing them live. </p><figure class="tmblr-full" data-orig-height="277" data-orig-width="711"><img src="https://78.media.tumblr.com/8307989f7f7e9432986b18e65c9e592f/tumblr_inline_omf5eiBVqJ1qb9570_540.png" data-orig-height="277" data-orig-width="711"/></figure><figure class="tmblr-full" data-orig-height="277" data-orig-width="711"><img src="https://78.media.tumblr.com/89a3e1f0cc29fa6a1772ed2d02092003/tumblr_inline_omf5eoCQqX1qb9570_540.png" data-orig-height="277" data-orig-width="711"/></figure><figure class="tmblr-full" data-orig-height="299" data-orig-width="711"><img src="https://78.media.tumblr.com/8dc0981c8057a7d60ade54995c677b61/tumblr_inline_omf5et9u4r1qb9570_540.png" data-orig-height="299" data-orig-width="711"/></figure><p>I listened to some artists a lot leading up to the show, then much less immediately after (SOHN, Tame Impala), some that I didn’t listen to much before, then a ton after (Bonobo, Jon Hopkins), and some that I listened to for months before and months after (Eric Prydz, with some serious cramming right before the show).</p><p>
+
+The .db and ancillary files are on <a href="https://github.com/beekley/Scrobbled">github </a>if you want to see how I did this or judge my music tastes. I had to do a little manipulation of the raw last.fm data, since sqlite didn’t like the way last.fm formatted datetime (see queries/songs2.sql for how I created a view that solved this).</p>

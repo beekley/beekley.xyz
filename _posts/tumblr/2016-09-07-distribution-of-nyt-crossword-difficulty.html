@@ -1,0 +1,19 @@
+---
+layout: post
+title: Distribution of NYT Crossword Difficulty (according to Rex Parker)
+date: '2016-09-07T21:13:12-07:00'
+tags:
+- frombrett
+- nytimes
+- nyt
+- crossword
+- data
+- science
+- statistics
+tumblr_url: http://beekley.xyz/post/150106832566/distribution-of-nyt-crossword-difficulty
+---
+<p>We try to do every day’s NYT crossword at work (2+ month streak!) and we check to see what crossword enthusiast, <a href="http://rexwordpuzzle.blogspot.com/">Rex Parker</a>, has to say about each. We often think they’re are harder than he rates them, so I wanted to see how even Rex’s “Relative Difficulty” was distributed.</p><figure class="tmblr-full" data-orig-height="447" data-orig-width="716"><img src="https://78.media.tumblr.com/aebe0d4f7c6077532c1c24c34cfbba9f/tumblr_inline_od62k2lOVu1qb9570_540.png" data-orig-height="447" data-orig-width="716"/></figure><p>Turns out it’s not bad. I <a href="http://webscraper.io">scraped </a>his blog for the past 1695 days and (brutishly) lumped each score into buckets. My methodology is below:</p><ul><li>If the word “Easy” was in the difficulty, then add “1″ to the “Easy” column for that day; else blank<br/></li><li>
+
+If the word “Medium” was in the difficulty, then add “2″ to the “Medium” column for that day; else blank<br/></li><li>
+
+If the word “Challenging” was in the difficulty, then add “3″ to the “Challenging” column for that day; else blank<br/></li><li>The average of non-blank columns is calculated in the “avg” column</li></ul><p>This makes the assumption that Rex is regular in his descriptions of difficulty (he is most of the time, but not all), and that all posts are made by Rex (most are, but not all), and that something like “Easy-Challenging” means “Medium”.</p><p>Next, I want to see the distribution over time and the distribution per day of the week.</p>

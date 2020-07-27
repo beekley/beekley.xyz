@@ -1,0 +1,16 @@
+---
+layout: post
+title: The Daily Commit 1 - 30/05/13
+date: '2013-05-30T13:42:00-07:00'
+tags:
+- programming
+- frombrett
+tumblr_url: http://beekley.xyz/post/51747164514/the-daily-commit-1-300513
+---
+<p>So far, City Builder only does a few things:</p>
+<ul><li>Generate a list of people with a distribution of wealths around an average, it </li>
+<li>Build a grid of land plots with a base &ldquo;value&rdquo;</li>
+<li>When a citizen is put into a plot, increase the value of the plots around it<!-- more --></li>
+</ul><p>The steps today were to start the algorithm that decides where to place each citizen. It creates a list that contains all of the plots in the grid. As each plot is added to the list, a Probability Counter increments by the value of the plot. When a citizen is being place, a random number is generated, less than the end value of the counter. If the random number is &lt;=Vplot1 (value of the first plot), then the first plot is chose. If the number is &gt;Vplot1 but &lt;=(Vplot2+Vplot1) then the 2nd plot is chosen, and so on.</p>
+<p>This isn&rsquo;t completely finished, but the start is there.</p>
+<p><a href="https://github.com/beekley/CityBuilder">GitHub</a></p>

@@ -1,0 +1,21 @@
+---
+layout: post
+title: Commuting Heatmap
+date: '2016-10-02T12:38:16-07:00'
+tags:
+- frombrett
+- programming
+- software
+- javascript
+- api
+- google
+- google maps
+- public transit
+- transit
+- traffic
+- trafficmap
+- data
+- visualization
+tumblr_url: http://beekley.xyz/post/151251894136/commuting-heatmap
+---
+<p>I’ve made some more progress on <a href="http://uncncntrtd.com/tagged/trafficmap">my heatmap project using the Google Maps APIs</a> and produced a couple cool maps of the sum of commute times for my girlfriend (to UCLA) and myself (to Long Beach) from locations across LA. </p><p>Below are some of the maps. Scale is unfortunately not always consistent and I don’t have specific numbers (except where mentioned).</p><figure data-orig-width="728" data-orig-height="730" class="tmblr-full"><img src="https://78.media.tumblr.com/f5c8f492d60ab22b247e8544bee28b56/tumblr_inline_oefq0yEkv21qb9570_540.png" alt="image" data-orig-width="728" data-orig-height="730"/></figure><p>8 am Monday projected travel time. Travel to UCLA: Public Transit; Travel to Long Beach: Driving. When taking transit, it really pays to be close to your destination. The minimum is right around UCLA (and right around where we live!)</p><figure data-orig-width="880" data-orig-height="747" class="tmblr-full"><img src="https://78.media.tumblr.com/197771be357f168e1a9859b2f4e743c8/tumblr_inline_oefq4z7ufI1qb9570_540.png" alt="image" data-orig-width="880" data-orig-height="747"/></figure><p>8 am Monday projected travel time. Travel to UCLA: Driving Travel to Long Beach: Driving. The scales on this and the above one are actually the same (the max deep-red is 5 hours of summed travel time). Minimum is pretty much in the same location as before, but the whole length of the 405 is pretty good. Below is the rescaled version to see detail a but better.</p><figure data-orig-width="774" data-orig-height="817" class="tmblr-full"><img src="https://78.media.tumblr.com/1552cf7a0bd34fe822e20eacdac926df/tumblr_inline_oefq85RVSD1qb9570_540.png" alt="image" data-orig-width="774" data-orig-height="817"/></figure><p>There are plenty more variations that would be cool to see, such as transit in both directions, or MIN(transit, driving), or MIN(transit, driving * some_pain_and_suffering_multiplier). But Google really doesn’t like this use of their API and I kept running into query limits. At &gt;100 datapoints, I had to slow the process and add a 5 second delay between requests. This was very tedious and I ended up just letting some of these run while I went to the UCLA football game last night (Go Bruins!). I’m ready to call this project done&ndash; at least for now.</p><p>This is available on <a href="https://github.com/beekley/TrafficMap">Github</a>, though I’ve killed my API key so you’ll have to BYOK. Note: Keep the dataset small and/or delay high.</p>

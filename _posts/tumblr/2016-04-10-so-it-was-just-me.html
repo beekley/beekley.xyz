@@ -1,0 +1,10 @@
+---
+layout: post
+title: So it was just me
+date: '2016-04-10T18:18:09-07:00'
+tags:
+- frombrett
+- programming
+tumblr_url: http://beekley.xyz/post/142603741241/so-it-was-just-me
+---
+<p>I spent a while on a little project trying to nail down why some values in an array in Javascript kept getting updated. I found every place where values in the array are assigned (one) and referenced (more). After commenting out more and more lines, I limited it down to a section where the array wasn’t referenced at all! But another array, which was “copied” from the first, was manipulated.</p><p>Oh. I guess arrays are just pointers and I learned more about (the basics of?) Javascript. It kinda feels like German, where I use(d) it a bunch without formal training. That’s good for like 70% conversations, but finally taking a class forced me to actually use concepts like <i>grammar</i>. Maybe I should formally learn Javascript.</p>

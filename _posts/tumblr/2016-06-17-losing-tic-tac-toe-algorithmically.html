@@ -1,0 +1,18 @@
+---
+layout: post
+title: Losing Tic Tac Toe (Algorithmically!)
+date: '2016-06-17T13:01:00-07:00'
+tags:
+- frombrett
+- tictactoe
+- games
+- gaming
+- ai
+- algorithms
+- data
+- datatree
+- math
+- programming
+tumblr_url: http://beekley.xyz/post/146074304736/losing-tic-tac-toe-algorithmically
+---
+<p>I made a previous post about my efforts to make a Tic Tac Toe AI that always loses, which tried to do it with a pretty little algorithm and nothing more. Maybe there is a pretty algorithm out there, but I didn&rsquo;t find it.</p><p>My new approach is to play every game in order to build a decision tree for the AI to follow. The tree is pretty big (a ~25mb nested JSON object), but the process is fast and a lot simpler in terms of code. Best of all: I can prove whether my hypothesis, that player two can always force a player one win, is true or not.</p><figure data-orig-width="754" data-orig-height="402" class="tmblr-full"><img src="https://78.media.tumblr.com/8dadb141a06fe61ede225fee5851c3e7/tumblr_inline_o8knrpAP491qb9570_540.png" alt="image" data-orig-width="754" data-orig-height="402"/></figure><figure data-orig-width="654" data-orig-height="362" class="tmblr-full"><img src="https://78.media.tumblr.com/f13cb5d2030848a2c44a725d2df3dcee/tumblr_inline_o8vhioGygS1qb9570_540.png" alt="image" data-orig-width="654" data-orig-height="362"/></figure><p>Each node of the tree looks like the top image above. The root has 9 children, which correspond to the 9 moves player one (P1) can make during the first turn. Each of those children have 8 children of their own (second, above), which correspond to P2&rsquo;s first turn. This continues to the leaves, where there is a completely filled in board and we know that the game is over.</p><p>By simulating each game, we can assign true&ndash; for cases where P1 wins&ndash; and false&ndash; where P2 wins or there&rsquo;s a draw&ndash; to each of the leaves. The leaves&rsquo; parent node (corresponding to turn 8, or P2&rsquo;s last turn) can be assigned &ldquo;true&rdquo; if either of its children are true, meaning P2 has a least one move it can make there P1 wins. The parent of this node (corresponding to turn 7, or P1&rsquo;s choice of three remaining spaces), can be assigned &ldquo;true&rdquo; if all of its children are true, meaning P1 must make a move that results in an eventual P1 win. This alternating AND/OR pattern continues up the tree to the root node. If the root node is &ldquo;true&rdquo;, then no matter what moves P1 makes, P2 can make a move that results in P1 winning.</p><p>And the answer&hellip; <strike>The hypothesis is correct</strike>! (edit: <a href="http://uncncntrtd.com/post/146178671706/losing-losing-tic-tac-toe">it’s proven false</a>)</p><p>You can view <a href="https://github.com/beekley/MoraleBooster/blob/DeepPurple/json.txt">the JSON file here on Github</a>, which has been cut down to about 11 mb by removing all moves that would occur after a game has been completed. I haven&rsquo;t done anything to confirm that my process works and is giving correct data, other than confirm that <a href="http://www.se16.info/hgb/tictactoe.htm">all 255,168 games</a> have been simulated. But that’ll come more after building the AI in my web version of the game and running through a test there (and letting humans battle this un-un-beatable foe!)</p>
