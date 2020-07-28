@@ -4,7 +4,7 @@ title: Brett Beekley
 ---
 ## Brett Beekley
 
-[blog](https://blog.beekley.xyz) - [github](https://github.com/beekley) - [linkedin](https://www.linkedin.com/brettbeekley/)
+[blog](https://blog.beekley.xyz) - [github](https://github.com/beekley) - [linkedin](https://www.linkedin.com/in/brettbeekley/)
 
 I am a nerd, [dice maker](https://www.instagram.com/humorsdice/), and software engineer making sure the Google [stays up](https://landing.google.com/sre/). I prefer he/him.
 
