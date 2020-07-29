@@ -8,12 +8,12 @@ title: Brett Beekley
 
 I am currently a software engineer making sure the Google [stays running](https://landing.google.com/sre/). Ask me about [BeyondCorp](https://www.beyondcorp.com/).
 
-I am a nerd, [dice maker](https://www.instagram.com/humorsdice/), and software engineer making sure the Google [stays up](https://landing.google.com/sre/). I prefer he/him.
+Right now, I'm into PC gaming (particularly CS:GO), [dice making](https://www.instagram.com/humorsdice/), and improving our communities through [housing reform](https://twitter.com/cayimby). I prefer he/him.
 
 ### Selected Projects
 
 * `2020` - [Wedding Template](https://github.com/beekley/wedding-template) - A fast, responsive, no-js wedding website.
-* `2018 - [TrafficMap](https://github.com/beekley/TrafficMap) - Plot where a household can live to minimize net commute times.
+* `2018` - [TrafficMap](https://github.com/beekley/TrafficMap) - Plot where a household can live to minimize net commute times.
 * `2017` - [LiveAPI](https://github.com/Live-API/LAPI-Server) - Create an API from any website's public data.
 
 ### Selected Blog Posts
